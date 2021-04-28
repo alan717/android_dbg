@@ -30,7 +30,7 @@ echo $n
 if [ -z "$n" ]
 then
 	echo "just jdb"
-	#adb shell su -c "/data/local/tmp/inject $pid /data/local/tmp/libdick.so"
+	adb shell su -c "/data/local/tmp/inject $pid /data/local/tmp/libdick.so"
 else
 
 	adb forward tcp:12345 tcp:12345
