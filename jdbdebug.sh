@@ -31,6 +31,9 @@ if [ -z "$n" ]
 then
 	echo "just jdb"
 	adb shell su -c "/data/local/tmp/inject $pid /data/local/tmp/libdick.so"
+	adb forward tcp:12345 tcp:12345
+	adb shell su -c "pkill gdbserver"
+	adb shell su -c "/data/local/tmp/gdbserver :12345 --attach ${pid}" &
 else
 
 	adb forward tcp:12345 tcp:12345
