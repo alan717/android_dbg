@@ -30,7 +30,7 @@ echo $n
 if [ -z "$n" ]
 then
 	echo "just and inject so ,and run jdb"
-	adb shell su -c "/data/local/tmp/inject $pid /data/local/tmp/libdick.so"
+	adb shell su -c "/data/local/tmp/inject /data/local/tmp/libdick.so $pid"
 	#adb forward tcp:12345 tcp:12345
 	#adb shell su -c "pkill gdbserver"
 	#adb shell su -c "/data/local/tmp/gdbserver :12345 --attach ${pid}" &
