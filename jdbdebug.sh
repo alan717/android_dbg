@@ -3,6 +3,7 @@ if [ -z "$1" ]
 then
 	v=$(cat .default_packagename)
 	set -- $v
+	echo $1
 else
 	echo $1> .default_packagename
 	echo "$1" >>.history_package
